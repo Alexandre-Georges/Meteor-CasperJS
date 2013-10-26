@@ -1,0 +1,40 @@
+<head>
+  <title>Meteor-CasperJS</title>
+</head>
+
+<body>
+  {{renderPage}}
+</body>
+
+<template name="home">
+    <a href="{{page1Path}}">Go to page 1</a>
+    <br />
+    <a href="{{page2Path}}">Go to page 2</a>
+    <br />
+    <form name="sendMessage">
+        <input type="text" name="user" placeholder="Username" /><input type="text" name="text" placeholder="Text" /><input type="submit" name="send" value="Send" />
+    </form>
+    {{> messages}}
+</template>
+<template name="messages">
+    <table>
+        {{#each messages}}
+            {{> message}}
+        {{/each}}
+    </table>
+</template>
+<template name="message"> 
+    <tr>
+        <td>{{date}}</td><td>{{user}}</td><td>{{text}}</td>
+    </tr>
+</template>
+
+<template name="page1">
+    <a href="{{homePath}}">Go to home</a>
+    <input type="button" name="click-page1" value="Click" />
+</template>
+
+<template name="page2">
+    <a href="{{homePath}}">Go to home</a>
+    <input type="button" name="click-page2" value="Click" />
+</template>
