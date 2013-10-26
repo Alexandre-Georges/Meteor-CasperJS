@@ -36,11 +36,3 @@ Template.messages.messages = function () {
     });
     return messages;
 };
-/*
-function testage() {
-    var creationDate = moment();
-                var realDate = moment(document.querySelector('body table tr td:nth-child(1)').innerHTML, 'DD/MM/YYYY HH:mm:ss');
-                var diff = Math.abs(realDate.diff(creationDate, 'milliseconds'));
-    
-    console.log(diff); 
-}*/
